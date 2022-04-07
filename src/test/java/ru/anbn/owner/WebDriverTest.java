@@ -16,7 +16,7 @@ public class WebDriverTest {
     }
 
     @Test
-    public void testGitHubTitle1() {
+    public void testGitHubTitle() {
         assertEquals(driver.getTitle(), "GitHub: Where the world builds software · GitHub");
     }
 

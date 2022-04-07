@@ -9,7 +9,7 @@ public class WebDriverConfig {
     }
 
     public Browser getBrowser() {
-        return Browser.CHROME;
+        return Browser.FIREFOX;
     }
 
     public boolean isRemote() {
@@ -17,7 +17,6 @@ public class WebDriverConfig {
     }
 
     public URL getRemote() {
-        
         return null;
     }
 
