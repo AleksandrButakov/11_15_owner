@@ -1,23 +1,25 @@
 package ru.anbn.owner.config;
 
+import org.aeonbits.owner.Config;
+
 import java.net.URL;
 
-public class WebDriverConfig {
+public interface WebDriverConfig extends Config {
 
-    public String getBaseUrl() {
-        return "https://github.com";
-    }
+    @Key("baseUrl")   // reading the value
+    @DefaultValue("https://github.com")  // default value processing
+    String getBaseUrl();  // converting the result
 
-    public Browser getBrowser() {
-        return Browser.FIREFOX;
-    }
+    @Key("browser")
+    @DefaultValue("CHROME")
+    Browser getBrowser();
 
-    public boolean isRemote() {
-        return false;
-    }
+    @Key("isRemote")
+    @DefaultValue("false")
+    boolean isRemote();
 
-    public URL getRemote() {
-        return null;
-    }
+    @Key("remoteUrl")
+    URL getRemoteUrl();
+
 
 }

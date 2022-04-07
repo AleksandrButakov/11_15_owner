@@ -1,5 +1,6 @@
 package ru.anbn.owner.config;
 
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -16,7 +17,8 @@ public class WebDriverProvider implements Supplier<WebDriver> {
     private final WebDriverConfig config;
 
     public WebDriverProvider() {
-        this.config = new WebDriverConfig();
+        //this.config = new LegacyWebDriverConfig();
+        this.config = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
     }
 
     @Override
@@ -28,7 +30,7 @@ public class WebDriverProvider implements Supplier<WebDriver> {
         driver.get(config.getBaseUrl());
 
         try {
-            sleep(3000);
+            sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
