@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import ru.anbn.owner.config.Browser;
 import ru.anbn.owner.config.TypeConfig;
 
-import java.net.MalformedURLException;
 import java.net.URL;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
