@@ -10,6 +10,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 public class LoginPage extends TestBase {
+
 /*
 Конфигурация WEB тестов
 1 Для локального запуска на chrome: gradle clean test -Dproperties=local

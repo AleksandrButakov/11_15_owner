@@ -3,7 +3,7 @@ package ru.anbn.owner.config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources("classpath:config/${properties}.properties")
-public interface ProjectConfig extends Config{
+public interface ProjectConfig extends Config {
 
     @Key("baseurl")
     @DefaultValue("https://github.com")

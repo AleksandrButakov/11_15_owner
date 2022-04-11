@@ -4,7 +4,7 @@ import org.aeonbits.owner.Config;
 
 @Config.Sources({"file:/tmp/api.properties",
         "classpath:config/api.properties"})
-public interface ApiConfig extends Config{
+public interface ApiConfig extends Config {
 
     @Key("apibaseurl")
     String apiBaseUrl();
